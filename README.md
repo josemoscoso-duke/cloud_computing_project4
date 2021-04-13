@@ -16,6 +16,17 @@ This project provides a prototyping schema that deploys a serverless data engine
      align="center"
      style="float: center; margin-right: 10px;" />
 
+## Prerequisites
+
+- Check the requirements.txt file in the hello_world folder inside *producer* and *consumer*. Make sure to execute in the respective venv: `pip install -r requirements.txt` in advance.
+- Create the following resources in advance:
+  - "fang" table in Dynamo DB
+  - unique output bucket name in S3 to store results. In my case I used "fangsentiment-project4"
+  - SQS that stores "names" from DynamoDB "fang" table. Make sure to use "name" as column name.
+  - IAM role with required access to both, *producer* and *consumer* lambda functions
+- Check the README files in the *producer* and *consumer* folders for a detailed explanation of deployment.
+- Check cloud9 IDE space available with `df -h` and eliminate default unused containers with `docker image prune --all`
+
 ### Reference Links:
 
 [Amazon Web Service (AWS)](https://aws.amazon.com)
