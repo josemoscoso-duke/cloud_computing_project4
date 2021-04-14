@@ -1,0 +1,7 @@
+pylint
+wikipedia
+requests
+pandas
+python-json-logger
+boto3
+black
