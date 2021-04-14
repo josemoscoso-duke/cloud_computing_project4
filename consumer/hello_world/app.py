@@ -188,4 +188,4 @@ def lambda_handler(event, context):
     df = apply_sentiment(df)
     LOG.info(f"Sentiment from FANG companies: {df.to_dict()}")
     write_s3(df=df, bucket="fangsentiment-project4", name=names)
-    LOG.info(f"I'm here")
+    #LOG.info(f"I'm here")
